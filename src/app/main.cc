@@ -1,4 +1,3 @@
-#include <iostream>
 #include "cli/CLI.hh"
 
 int main(int argc, char** argv) {

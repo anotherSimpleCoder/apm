@@ -1,12 +1,8 @@
-add_library(Commands
-	Commands.cc
-)
-
 add_library(CLI
 	CLI.cc	
 )
 
 target_link_libraries(CLI
 	Commands
-  CMake
+	CMake
 )

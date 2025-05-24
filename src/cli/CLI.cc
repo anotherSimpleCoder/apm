@@ -1,5 +1,5 @@
 #include "cli/CLI.hh"
-#include "cli/Commands.hh"
+#include "commands/Commands.hh"
 
 #include <iostream>
 #include <vector>
