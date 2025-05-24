@@ -41,11 +41,11 @@ void NewCommand::create_project(const std::vector<std::string>& args) {
   std::cout << "Project " << project_name << " created successfully!" << std::endl;
 }
 
-ModuleToken NewCommand::get_module_token(const std::string& string_module_token) {
-  if(string_module_token == "library") return Commands::ModuleToken::LIB;
-  if(string_module_token == "shared") return Commands::ModuleToken::SHARED_LIB;
-  if(string_module_token == "executable") return Commands::ModuleToken::EXEC;
-  return Commands::ModuleToken::INVALID_MODULE;
+NewCommand::ModuleToken NewCommand::get_module_token(const std::string& string_module_token) {
+  if(string_module_token == "library") return LIB;
+  if(string_module_token == "shared") return SHARED_LIB;
+  if(string_module_token == "executable") return EXEC;
+  return INVALID_MODULE;
 }
 
 void NewCommand::create_module(const std::vector<std::string>& args) {

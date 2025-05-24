@@ -25,7 +25,7 @@ void CLI::run(int argc, char** argv) {
 
 	switch(command) {
 		case Commands::CommandToken::NEW: {
-			Commands::create_project(args);
+			Commands::NewCommand::create_project(args);
 			break;			
 		}
 
