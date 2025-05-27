@@ -8,16 +8,20 @@ pipeline {
 
     stages {
         stage('Set up build environment') {
-            sh 'mkdir build'
+            steps {
+                sh 'mkdir build'
             
-            dir('build') {
-                sh 'cmake ..'
+                dir('build') {
+                    sh 'cmake ..'
+                }
             }
         }
 
         stage('Build') {
-            dir('build') {
-                sh 'cmake --build .'
+            steps {
+                dir('build') {
+                    sh 'cmake --build .'
+                }
             }
         }
     }
