@@ -8,8 +8,6 @@ namespace Commands {
 		INVALID
 	};
 
-
-
 	CommandToken get_command_token(const std::string& string_command);
 
 	namespace NewCommand {

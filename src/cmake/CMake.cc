@@ -34,7 +34,6 @@ void CMake::write_c_make_project_file(std::string& project_name) {
 
 void CMake::write_c_make_test_file(const std::string& project_name) {
   std::ofstream test_c_make_file(project_name + "/test/CMakeLists.txt");
-  test_c_make_file << "find_package(GTest CONFIG REQUIRED)" << std::endl;
 }
 
 std::string create_module_folders(const std::string& project_name, const std::string& module_name) {

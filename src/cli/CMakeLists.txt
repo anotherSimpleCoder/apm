@@ -5,4 +5,5 @@ add_library(CLI
 target_link_libraries(CLI
 	Commands
 	CMake
+	Vcpkg
 )

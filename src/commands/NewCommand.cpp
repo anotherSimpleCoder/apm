@@ -1,5 +1,6 @@
 #include "commands/Commands.hh"
 #include "cmake/CMake.hh"
+#include "vcpkg/Vcpkg.hh"
 
 #include <iostream>
 #include <array>
@@ -38,6 +39,7 @@ void NewCommand::create_project(const std::vector<std::string>& args) {
   CMake::write_c_make_project_file(project_name);
   CMake::write_c_make_test_file(project_name);
   CMake::write_c_make_executable_file(project_name, mainExecName);
+  Vcpkg::initialize_vcpkg(project_name);
   std::cout << "Project " << project_name << " created successfully!" << std::endl;
 }
 
